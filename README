@@ -1,0 +1,55 @@
+
+Radd Team presents: the SAGE Miss System.
+
+Maintainer: Katrina Payne
+
+The SAGE Miss System is a general purpose emulation system designed to 
+abstract the requirements to run a video game system to allow for a setup 
+that uses a Front-end, middle-end and backend type set up.
+
+Expanded
+
+The SAGE Miss System is an emulation system that generally came from a large 
+ammount of frustration in the Kid Radd community. Various issues with most 
+modern emulators are generally:
+
+ * The systems being emulated are generally anywhere from >1MHz to about 
+   67MHz (what the NDS actually clocks in at). Most computers running them 
+   are more than 500MHz in clock speed. Even going with the idea that some 
+   of them may use a RISC setup, there is no reason that an NDS emulator 
+   should lag like all hell on my Acer Aspire.
+ * Multiplayer systems generally tend to be very poorly designed in there 
+   setup.
+ * The emulators generally tend to have various porting issues between 
+   platforms.
+
+
+Fixes (Planned):
+
+ * The emulator will work on several levels. 
+ * One level, will be the abstraction level. A general purpose setup that can 
+   set up a memory layout for the system, access the graphics hardware, talk 
+   on the network, grab device input--all that jazz. None of this should be 
+   specific to the system being emulated. In fact, the system being targetted 
+   should have any specifics avoided. Instead relying on various standard 
+   APIs. Also, User Interface at this level should be at the very minimal.
+ * Two level, will be definition level. Here the tools provided by One Level 
+   will be expanded into a manner that can accept and understand the image 
+   information given to Miss System.
+ * Three level will be the user interface level. While this should be usuable 
+   via one and two levels--this will make it more friendly to the average 
+   person running the ROM.
+ * Multiplayer will be setup by allowing network devices to act as a form of 
+   input. Much like a controller. Rather than have a specific setup to run 
+   multiplayer games over the internet, we will simply regard it as another 
+   form of input. Generally done in a Peer 2 Peer manner of sorts. It will 
+   be done in a syncronous manner. As if the network input does not send 
+   anything, it should be treated as no input being given.
+ * Added to this, would have the SAGE Miss System use its own ICMP tools 
+   setup for use inside this. Allowing a player to be able to ping out.
+ * The SAGE Miss System will be writen in C++. The libraries it makes use 
+   of will avoid being system specific.
+
+Look forward to something done in the gaming field that is not done by some 
+cheese ball who just learned Java, and thinks they can make Evercrack, Wow 
+and Halo combined.
